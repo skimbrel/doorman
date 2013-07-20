@@ -12,4 +12,4 @@ def open_door():
     response = twiml.Response()
     response.play(OPEN_DOOR_WAV)
     response.hangup()
-    return response.toxml()
+    return unicode(response)
