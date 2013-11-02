@@ -5,8 +5,6 @@ from flask import request
 from twilio import twiml
 
 
-OPEN_DOOR_WAV = 'https://dl.dropboxusercontent.com/u/191231/9.wav'
-
 app = flask.Flask(__name__)
 app.debug = True
 redis_client = redis.Redis.from_url(os.environ['REDIS_URL'])
@@ -36,7 +34,7 @@ def knock():
 def open_door():
     response = twiml.Response()
     if redis_client.get(DOOR_IS_OPEN) == 'true':
-        response.play(OPEN_DOOR_WAV)
+        response.play(digits='ww999')
     else:
         response.say(u'Sorry, the door is locked.', voice='alice')
     response.hangup()
