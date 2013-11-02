@@ -21,11 +21,11 @@ def knock():
     if body == SECRET_KEY:
         redis_client.set(DOOR_IS_OPEN, 'true')
         redis_client.expire(DOOR_IS_OPEN, 60)
-        response.sms(
+        response.message(
             u'Passcode accepted. Please dial from the box in the next minute.'
         )
     else:
-        response.sms(u'Passcode incorrect! Please try again.')
+        response.message(u'Passcode incorrect! Please try again.')
 
     return unicode(response)
 
