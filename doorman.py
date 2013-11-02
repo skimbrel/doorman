@@ -8,7 +8,7 @@ from twilio import twiml
 app = flask.Flask(__name__)
 app.debug = True
 redis_client = redis.Redis.from_url(os.environ['REDIS_URL'])
-print redis_client
+
 SECRET_KEY = u'1234'
 DOOR_IS_OPEN = 'door-open'
 TIMEOUT = 60  # seconds
