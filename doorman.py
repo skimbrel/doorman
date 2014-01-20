@@ -38,8 +38,8 @@ def open_door():
         response.play(digits=OPEN_SEQUENCE)
 
     else:
-        with response.gather(action=u'/digits', finishOnKey=u'#') as g:
-            g.say(u'Please enter the passcode, followed by the pound key.',
+        with response.gather(action=u'/digits', finishOnKey=u'*') as g:
+            g.say(u'Please enter the passcode, followed by the star key.',
                   voice=u'alice')
             g.pause(length=5)
 
