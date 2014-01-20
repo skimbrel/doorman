@@ -9,7 +9,7 @@ app = flask.Flask(__name__)
 app.debug = True
 redis_client = redis.Redis.from_url(os.environ['REDIS_URL'])
 
-SECRET_KEY = u'1234'
+SECRET_KEY = os.environ['SECRET_KEY']
 DOOR_IS_OPEN = 'door-open'
 TIMEOUT = 60  # seconds
 OPEN_SEQUENCE = 'ww999'
