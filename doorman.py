@@ -64,7 +64,7 @@ def gather_digits():
 
     elif digits == SECRET_KEY:
         response.say(u'Passcode accepted. Please enter.', voice=u'alice')
-        response.play(OPEN_SEQUENCE)
+        response.play(digits=OPEN_SEQUENCE)
 
     else:
         response.say(
