@@ -44,7 +44,7 @@ def open_door():
             g.pause(length=5)
 
         response.say(
-            u"Sorry, you didn't enter the passcode in time. Pleas try again.",
+            u"Sorry, you didn't enter the passcode in time. Please try again.",
             voice=u'alice',
         )
 
